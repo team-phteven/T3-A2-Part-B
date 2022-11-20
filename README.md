@@ -24,7 +24,7 @@ Node was used to run the backend of the application. It serves as an API, taking
 
 ### What is Express?
 
-Express is a flexible framework for building web applications which is imported into the Node back end to build out RESTful APIs.
+Express is a flexible framework for building web applications which is imported into the Node backend to build out RESTful APIs.
 
 ### How is Express used in the project?
 
@@ -122,11 +122,11 @@ Socket.io-client was used to create the socket actions, responses and events in 
 
 ## Validator
 
-### What is validator?
+### What is Validator?
 
 Validator is a Javascript library used to provide validation of user input.
 
-### How was validator used in the project?
+### How was Validator used in the project?
 
 Validator was used to conveniently validate user input for things such as email validation, which meant complex regex wasn't needed.
 
