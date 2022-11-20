@@ -260,12 +260,8 @@ The Agile project management methodology was utilised in this project. Work was 
 
 ## Seventh Sprint
 
-<img src="docs/agile/group-5/11.png" width="800px">
-<img src="docs/agile/group-5/10.png" width="800px">
-<img src="docs/agile/group-5/9.png" width="800px">
-<img src="docs/agile/group-5/8.png" width="800px">
-<img src="docs/agile/group-5/7.png" width="800px">
-<img src="docs/agile/group-5/6.png" width="800px">
-<img src="docs/agile/group-5/4.png" width="800px">
-<img src="docs/agile/group-5/3.png" width="800px">
-<img src="docs/agile/group-5/1.png" width="800px">
+<img src="docs/agile/group-7/5.png" width="800px">
+<img src="docs/agile/group-7/4.png" width="800px">
+<img src="docs/agile/group-7/3.png" width="800px">
+<img src="docs/agile/group-7/2.png" width="800px">
+<img src="docs/agile/group-7/1.png" width="800px">
