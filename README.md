@@ -138,7 +138,7 @@ Bootstrap is a css library that provides pre-defined css classes for use on html
 
 ### How was Bootstrap used in the project?
 
-Bootstrap weas imported into the front-end which enabled the use of react-bootstrap.
+Bootstrap was imported into the front-end which enabled the use of react-bootstrap.
 
 ## React-bootstrap
 
@@ -200,14 +200,72 @@ React-icons is a library that provides access to a huge selection of different i
 
 React-icons was used to enhance the user interface by providing visually appealing images instead of text for some buttons and toggles.
 
-# Project Management Methodology
+# Project Management and Task Delegation Methodology
 
-# Task Delegation Methodology
+The Agile project management methodology was utilised in this project. Work was organised into sprints and executed accordingly. Tasks were delegated based on strengths and weaknesses of team members.
 
-<img src="docs/overall-first.png" width="800px">
+## First Sprint
 
-<img src="docs/user-auth.png" width="300px">
+<img src="docs/agile/group-1/3.png" width="800px">
+<img src="docs/agile/group-1/1.png" width="800px">
+<img src="docs/agile/group-1/2.png" width="800px">
+<img src="docs/agile/group-1/4.png" width="800px">
 
-<img src="docs/conversations.png" width="300px">
+## Second Sprint
 
-<img src="docs/messages.png" width="300px">
+<img src="docs/agile/group-2/5.png" width="800px">
+<img src="docs/agile/group-2/3.png" width="800px">
+<img src="docs/agile/group-2/2.png" width="800px">
+<img src="docs/agile/group-2/4.png" width="800px">
+
+## Third Sprint
+
+<img src="docs/agile/group-3/8.png" width="800px">
+<img src="docs/agile/group-3/1.png" width="800px">
+<img src="docs/agile/group-3/2.png" width="800px">
+<img src="docs/agile/group-3/3.png" width="800px">
+<img src="docs/agile/group-3/4.png" width="800px">
+<img src="docs/agile/group-3/5.png" width="800px">
+<img src="docs/agile/group-3/6.png" width="800px">
+<img src="docs/agile/group-3/7.png" width="800px">
+
+## Fourth Sprint
+
+<img src="docs/agile/group-4/6.png" width="800px">
+<img src="docs/agile/group-4/5.png" width="800px">
+<img src="docs/agile/group-4/4.png" width="800px">
+<img src="docs/agile/group-4/3.png" width="800px">
+<img src="docs/agile/group-4/2.png" width="800px">
+<img src="docs/agile/group-4/1.png" width="800px">
+
+## Fifth Sprint
+
+<img src="docs/agile/group-5/11.png" width="800px">
+<img src="docs/agile/group-5/10.png" width="800px">
+<img src="docs/agile/group-5/9.png" width="800px">
+<img src="docs/agile/group-5/8.png" width="800px">
+<img src="docs/agile/group-5/7.png" width="800px">
+<img src="docs/agile/group-5/6.png" width="800px">
+<img src="docs/agile/group-5/4.png" width="800px">
+<img src="docs/agile/group-5/3.png" width="800px">
+<img src="docs/agile/group-5/1.png" width="800px">
+
+## Sixth Sprint
+
+<img src="docs/agile/group-6/7.png" width="800px">
+<img src="docs/agile/group-6/6.png" width="800px">
+<img src="docs/agile/group-6/4.png" width="800px">
+<img src="docs/agile/group-6/3.png" width="800px">
+<img src="docs/agile/group-6/2.png" width="800px">
+
+## Seventh Sprint
+
+<img src="docs/agile/group-5/11.png" width="800px">
+<img src="docs/agile/group-5/10.png" width="800px">
+<img src="docs/agile/group-5/9.png" width="800px">
+<img src="docs/agile/group-5/8.png" width="800px">
+<img src="docs/agile/group-5/7.png" width="800px">
+<img src="docs/agile/group-5/6.png" width="800px">
+<img src="docs/agile/group-5/4.png" width="800px">
+<img src="docs/agile/group-5/3.png" width="800px">
+<img src="docs/agile/group-5/1.png" width="800px">
