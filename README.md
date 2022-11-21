@@ -200,6 +200,14 @@ React-icons is a library that provides access to a huge selection of different i
 
 React-icons was used to enhance the user interface by providing visually appealing images instead of text for some buttons and toggles.
 
+# User Testing (in development)
+
+<img src="docs/whole-page-dev.png" width="800px">
+
+# User Testing (in production)
+
+<img src="docs/whole-page-prod.png" width="800px">
+
 # Project Management and Task Delegation Methodology
 
 The Agile project management methodology was utilised in this project. Work was organised into sprints and executed accordingly. Tasks were delegated based on strengths and weaknesses of team members.
@@ -265,3 +273,9 @@ The Agile project management methodology was utilised in this project. Work was 
 <img src="docs/agile/group-7/3.png" width="800px">
 <img src="docs/agile/group-7/2.png" width="800px">
 <img src="docs/agile/group-7/1.png" width="800px">
+
+## Eighth Sprint
+
+<img src="docs/agile/group-8/1.png" width="800px">
+<img src="docs/agile/group-8/3.png" width="800px">
+<img src="docs/agile/group-8/2.png" width="800px">
