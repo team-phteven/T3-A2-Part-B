@@ -2,9 +2,9 @@
 
 This Repo is the overarching README for the submission of Term 3 Assessment 2 (Part B) by Stephen Smith and Riki Fujihara.
 
-### Link to Frontend Repo: <a link='https://github.com/team-phteven/basil-frontend'>link</a>
+### Link to Frontend Repo: <a href='https://github.com/team-phteven/basil-frontend'>here</a>
 
-### Link to Backend Repo: <a link='https://github.com/team-phteven/basil-backend'>link</a>
+### Link to Backend Repo: <a href='https://github.com/team-phteven/basil-backend'>here</a>
 
 # Libraries used
 
