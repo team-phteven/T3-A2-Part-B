@@ -18,7 +18,7 @@ Node is a Javascript runtime built based on Chrome's V8 engine. Javascript could
 
 ### How is Node used in the project?
 
-Node was used to run the backend of the application. It serves as an API, taking incoming requests and responding with appropriate data/actions.
+Node was used to run the backend of the application. It serves as an environment to run the Express app from and is an important part of Basil's API.
 
 ## Express
 
@@ -48,7 +48,7 @@ MongoDB is a no-sql database which stores data by grouping individual 'documents
 
 ### How was MongoDB used in the project?
 
-MongoDB was the database of choice for the app.
+MongoDB was the database of choice for the app. It was selected thanks to its ease of use in rapid development environments as a flexible database for dynamic data.
 
 ## Mongoose
 
@@ -58,7 +58,7 @@ Mongoose is an Object Data Modeling library that creates a connection between Mo
 
 ### How was Mongoose used in the project?
 
-Mongoose was used to create schemas for the models in the app (User, Conversation, Message) and the relations between them.
+Mongoose was used to create schemas for the models in the app (User, Conversation, Message) and the relations between them. It also has some useful functions for querying and 'populating' data that were utilized a lot throughout development of the app.
 
 ## Bcrypt
 
@@ -78,7 +78,7 @@ Json web token is a library used for generating unique json tokens that are pass
 
 ### How was Json web token used in the project?
 
-Json web tokens were generated for the user upon login to provide authentication for what the user can and can't access.
+Json web tokens were generated for the user upon login to provide authentication for what the user can and can't access. They were stored in local storage and attached as Bearer Tokens to the Authorization Headers of most of the API calls. We also stored the logged in user's id inside this token so it would be available for every request that needed it, without having to store the plain id in local storage.
 
 ## Cors
 
@@ -88,7 +88,7 @@ Cors is a library that is used to configure cross origin resource sharing option
 
 ### How was cors used in the project?
 
-Cors was used to provide the Netlify front end access to make requests to the Heroku backend。
+Cors was used to provide the Netlify front end access to make requests to the Heroku backend. 
 
 ## Dotenv
 
@@ -108,7 +108,7 @@ Socket.io is a library used to handle web-sockets in the Node backend.
 
 ### How was socket.io used in the project?
 
-Socket.io was used to create the socket actions, responses and events in the Node backend, particularly for responding to incoming instant messages.
+Socket.io uses the web socket protocol to send real-time data. It uses an initial http handshake to connect the sockets but from there data can flow freely. This allowed for instant messaging features and data transfer without the need for regular http requests. A benefit to the Socket.io library is that it has built-in fall-back protection that will automatically use http long polling if a web socket connection is lost.
 
 ## Socket.io-client
 
@@ -120,21 +120,11 @@ Socket.io is a library used to handle web-sockets in the front-end.
 
 Socket.io-client was used to create the socket actions, responses and events in the React front end, particularly for emitting events when sending instant messages.
 
-## Validator
-
-### What is Validator?
-
-Validator is a Javascript library used to provide validation of user input.
-
-### How was Validator used in the project?
-
-Validator was used to conveniently validate user input for things such as email validation, which meant complex regex wasn't needed.
-
 ## Bootstrap
 
 ### What is Bootstrap?
 
-Bootstrap is a css library that provides pre-defined css classes for use on html elements.
+Bootstrap is a css library that provides pre-defined css classes and complex components for use on html elements.
 
 ### How was Bootstrap used in the project?
 
@@ -168,7 +158,7 @@ Styled-components is a library that allows the creation of React components with
 
 ### How was Styled-components used in the project?
 
-Styled-components was used to provide css styling directly to react components in the app. It was also used to add to and override the default bootstrap styles provided by Bootstrap and React-bootstrap.
+Styled-components was used to provide css styling directly to react components in the app. It was also used to add to and override the default bootstrap styles provided by Bootstrap and React-bootstrap. The style system used involved avoiding using bootstrap utility classes, and instead defining the css styling as styled components. This workflow allowed for easy styling of bootstrap react components.
 
 ## Jest
 
@@ -188,7 +178,7 @@ Luxon is a javascript library for manipulating and formatting dates in Javascrip
 
 ### How was Luxon used in the project?
 
-Luxon was used particularly for formatting times that messages were sent.
+Luxon was used particularly for displaying message times in a human readable format. Abstracting out this code meant implementing times like "Yesterday at 10:00am" was as easy as wrapping a DateTime in a Luxon function.
 
 ## React-icons
 
@@ -198,7 +188,7 @@ React-icons is a library that provides access to a huge selection of different i
 
 ### How was React-icons used in the project?
 
-React-icons was used to enhance the user interface by providing visually appealing images instead of text for some buttons and toggles.
+React-icons was used to enhance the user interface by providing visually appealing images instead of text for some buttons and toggles. Using this library instead of manually downloading SVGs and importing them allowed for a quick and painless workflow. It also meant that responding to user feedback and making icon changes was a quick and painless experience.
 
 # User Testing (in development)
 
@@ -207,6 +197,72 @@ React-icons was used to enhance the user interface by providing visually appeali
 # User Testing (in production)
 
 <img src="docs/whole-page-prod.png" width="800px">
+
+# Jest and React Testing
+
+Jest and react testing library were used for testing components in the front end. By utilizing react testing library's queries and event firing methods, components could be selected, interacted with and fed mock data for testing user flow and functionality. It was also helpful when refactoring parts of the application, as it could alert to functionality that may have been broken by seemingly unrelated changes.
+
+Here is an example of how our tests were set up:
+
+```js
+// load LogInForm wrapped in Router
+beforeEach(() => {
+    render(
+        <PasswordFloatingLabelToggle />
+    );
+});
+
+// note FloatingLabels are considered placeholders on load
+test("should render input with placeholder", () => {
+    const input = screen.getByPlaceholderText("Password");
+    expect(input).toBeInTheDocument();
+});
+
+test("should render show password button", () => {
+    const button = screen.getByTestId("show");
+    expect(button).toBeInTheDocument();
+});
+
+// Tetsing for the show/hide functionality of password field
+test("should have input type: password by default and type: text after button click", () => {
+    const input = screen.getByPlaceholderText("Password");
+    const button = screen.getByTestId("show");
+    expect(input.type).toBe("password");
+    fireEvent.click(button);
+    expect(input.type).toBe("text");
+});
+```
+
+In this example the PasswordFloatingLabelToggle - a custom component that combines a password field with a floating label, and has a button that hides and shows the characters - is tested for functionality. First a` beforeEach` function is set up so that the component is rendered to the `screen` before each test. Then there is a test to check that the password input field has been successfully rendered with the floating label. Another test checks that a button is also present. And finally there is a test which checks the input type of the field (which should be `password` to begin with so the letters are hidden), then fires a `click` event on the button, and then checks that the input type has successfully changed to `text` (indicating that the password is visible.)
+
+The rest of the component tests can be found in `src/ components/__tests__/`
+
+# API Tests With Postman
+
+Postman is a useful application that was utilized to test API end points in development. It allows for creating complex HTTP requests to the API and was useful in testing not only basic CRUD functionality but also JWT and authorization.
+
+The below screenshot is an example of the Sign Up test. All of the tests for the project are visible on the left side of the screen. This test in particular made a POST request to the `/api/users/sign-up` endpoint. It took JSON containing the user's sign up details and on a successful response would return the object that is stored in localStorage. Most importantly it returns a token that can be used to test other endpoints.
+
+<img src="docs/postman/PostmanSignUp.png" width="800px">
+
+In the below screenshots an Authorization Header with a Bearer Token is attached to the request along with a user's email in the body. A successful response can be seen on the right side of the screen with the conversation data needed for the front end. In the `requests` property of the response data we can see the Contact ID which can be used to create a new conversation from Postman.
+
+<img src="docs/postman/PostmanAddRequest.png" width="800px">
+<img src="docs/postman/PostmanAddRequest2.png" width="800px">
+
+The Log In User test can be used to get a token for the contact who needs to accept the request. This bearer token can be added to the Create Conversation test, along with a `users` array in the body, which consists of the ID of both the receiving user and the requesting user. In the below screenshots, there is a response of `200 OK` and an empty array returned. This array is the receiving users `requests` array, showing that the previous conversation request that was made has now been removed and a conversation has been created.
+
+<img src="docs/postman/PostmanCreateConversation.png" width="800px">
+<img src="docs/postman/PostmanCreateConversation2.png" width="800px">
+
+By sending a get request to the conversations end point and including an Authorization Header with the token of the new user, all of the user's conversations are returned. From here the conversation's `_id` can be used for the Send Message test. 
+
+<img src="docs/postman/PostmanCreateConversation2.png" width="800px">
+
+Finally the Send Message test can be used by simply adding the user's token and including the conversation `id_` from the previous test, along with some message content.
+
+<img src="docs/postman/PostmanSendMessage.png" width="800px">
+
 
 # Project Management and Task Delegation Methodology
 
