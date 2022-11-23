@@ -1,5 +1,7 @@
 # T3-A2-Part-B
 
+The deployed site is at [https://basilchat.com](https://basilchat.com)
+
 This Repo is the overarching README for the submission of Term 3 Assessment 2 (Part B) by Stephen Smith and Riki Fujihara.
 
 ### Link to Frontend Repo: <a href='https://github.com/team-phteven/basil-frontend'>here</a>
